@@ -19,7 +19,7 @@ def proof_of_work(last_proof):
     - p is the previous proof, and p' is the new proof
     - Use the same method to generate SHA-256 hashes as the examples in class
     """
-
+    previous_hash = hashlib.sha256(f"{last_proof}".encode()).hexdigest()
     start = timer()
 
     print("Searching for next proof")
